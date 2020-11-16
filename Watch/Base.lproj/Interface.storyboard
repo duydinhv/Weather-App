@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17156" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="13b-Gz-xCe">
+    <device id="watch40"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17035"/>
+    </dependencies>
+    <scenes>
+        <!--Weather-->
+        <scene sceneID="pic-hk-ONH">
+            <objects>
+                <controller title="Weather" id="13b-Gz-xCe" customClass="MainInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="Ucc-qN-wiD">
+                            <items>
+                                <tableRow identifier="MainRow" id="uiM-rx-ZTc" customClass="RowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="fgy-ic-ruB">
+                                        <items>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="7pO-Iz-RCi">
+                                                <items>
+                                                    <label alignment="left" text="Da Nang" id="qfi-bw-ChL">
+                                                        <fontDescription key="font" type="system" pointSize="13"/>
+                                                    </label>
+                                                    <label alignment="left" text="25°C" id="a9g-Wb-4e5">
+                                                        <fontDescription key="font" type="system" pointSize="22"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <imageView width="30" height="30" alignment="right" image="sun.min.fill" catalog="system" id="dTt-h4-cYc"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="iconImage" destination="dTt-h4-cYc" id="whV-ht-GER"/>
+                                        <outlet property="locationLabel" destination="qfi-bw-ChL" id="yRD-V2-Xan"/>
+                                        <outlet property="tempLabel" destination="a9g-Wb-4e5" id="tPb-pp-EcO"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Ucc-qN-wiD" id="QhK-yd-UBb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="338" y="492"/>
+        </scene>
+        <!--DailyIC-->
+        <scene sceneID="gTe-V9-lEa">
+            <objects>
+                <controller identifier="DailyIC" id="8kS-B1-A4y" customClass="DailyInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="5Hu-sc-WrK">
+                            <items>
+                                <tableRow identifier="DailyRow" id="yGI-jX-IIf" customClass="DailyRowController" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="0.0" id="mpB-xM-LXj">
+                                        <items>
+                                            <group width="1" widthAdjustment="1" alignment="left" id="OWi-8k-AVd">
+                                                <items>
+                                                    <label width="0.59999999999999998" alignment="left" text="Fri, 13" id="CuQ-kh-HKR">
+                                                        <fontDescription key="font" type="system" pointSize="15"/>
+                                                    </label>
+                                                    <imageView width="30" height="30" alignment="right" image="sun.min.fill" catalog="system" contentMode="scaleAspectFill" id="N1y-Ld-33O"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="q5w-XE-C7o">
+                                                <items>
+                                                    <label alignment="left" text="25°C" id="npp-aa-N9g">
+                                                        <fontDescription key="font" type="system" pointSize="22"/>
+                                                    </label>
+                                                    <label alignment="right" verticalAlignment="center" text="H:27°C L:24°C" id="15p-Xw-Q12">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dateLabel" destination="CuQ-kh-HKR" id="l4x-Tl-TEi"/>
+                                        <outlet property="highLowTempLabel" destination="15p-Xw-Q12" id="cd2-Ha-F6E"/>
+                                        <outlet property="iconImage" destination="N1y-Ld-33O" id="fr9-61-lPi"/>
+                                        <outlet property="tempLabel" destination="npp-aa-N9g" id="qJa-fe-um0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="5Hu-sc-WrK" id="Bgi-GP-JSt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="599" y="492"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
